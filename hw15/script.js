@@ -1,16 +1,9 @@
-let arr = ['Banana', 4, 10, 'Strawberry', 2, 4];
-let arrNum = [];
-let sum = 0;
-function num(){
-    arrNum += arr.filter(function(number) {
-        return !isNaN(Number(number));
-    });
-console.log(arrNum);
-    for(let i = 0; i < arrNum.length; i++) {
-        sum += arrNum[i];
+function pow(num, degree) {
+    if (degree === 1) {
+        return num;
+    } else {
+        return num * pow(num, degree - 1);
     }
-    return sum / arrNum.length;
-
 }
-num();
-console.log(sum);
+
+console.log(pow(6, 3));
